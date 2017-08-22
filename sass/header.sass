@@ -1,0 +1,154 @@
+@import "bourbon"
+@import "vars.sass"
+@import "fonts.sass"
+@import "smart-grid.sass"
+
++reset()
+
+*
+    box-sizing: border-box
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+    font-family: "LatoRegular"
+	overflow-x: hidden
+
+h1
+    font-size: 80px;
+    font-family: "ChunkFive"
+    text-transform: uppercase
+    color: #fff;
+    line-height: 1.4
+    span
+        color: $c-dark-blue
+
+h2
+    font-size: 67px;
+    color: $c-light-blue
+    font-family: "ChunkFive"
+    span
+        color: $c-dark-blue
+
+h3
+    font-size: 44px;
+    font-family: "LatoRegular"
+    
+p
+    font-family: "Latoregular"
+    color: #fff
+    line-height: 1.8
+
+.wrapper
+    +wrapper()
+    
+.button
+    height: 60px
+    font-size: 14px
+    border-radius: 40px;
+    display: flex
+    flex-direction: row
+    align-items: center
+    +justify-content(center)
+    p
+        color: #000
+        font-family: "LatoBlack"
+        text-transform: uppercase
+        
+header
+    background-image: url("../img/bg_top.png")
+    height: 740px
+    flex-direction: column
+    .menubar
+        +row-flex()
+        +align-items(center)
+        height: 120px
+        .logo
+            font-size: 25px
+            color: #fff
+            +col()
+            +col-3()
+            +col-md-12()
+            +col-xs-6()
+            #first
+                font-family: "MontserratRegular"
+            #second
+                font-family: "MontserratBold"
+        .menu
+            font-size: 18px
+            font-family: "LatoMedium"
+            +col()
+            +col-6()
+            +offset-left(2)
+            +col-md-10()
+            +offset-left-md(0)
+            +col-xs-12()
+            display: flex
+            flex-wrap: wrap
+            +justify-content(space-around)
+            +align-items(center)
+            li
+                transition: all 0.2s ease
+                padding: 8px
+                border: 2px solid rgba(255,255,255,0)
+                border-radius: 25px
+                cursor: pointer
+                a
+                    text-decoration: none
+                    color: #fff
+                &:hover
+                    border-color: rgba(255,255,255,1)
+                    a
+                        font-family: "LatoHeavy"
+                &:active
+                    background-color: #fff
+                    a
+                        color: $c-dark-blue
+        .user
+            +col()
+            +col-1()
+            +col-md-2()
+            +col-xs-6()
+            display: flex
+            align-items: center
+            +justify-content(center)
+            +justify-content-xs(flex-end)
+            img
+                border-radius: 50%
+            .fa-caret-down
+                color: #fff
+                font-size: 14px
+                margin-left: 5px
+            
+    .title
+        margin-top: 110px
+        height: 510px
+        text-align: center
+        +row-flex()
+        +flex-direction(column)
+        .button
+            +col()
+            +col-2()
+            +offset(5)
+            +col-md-4()
+            +offset-md(4)
+            +col-xs-12()
+            +offset-xs(0)
+            transition: all 0.2s ease
+            background-color: $c-yellow
+            margin-top: 50px;
+            cursor: pointer
+            border: 3px solid rgba(255,255,166,0)
+            &:hover
+                border: 2px solid rgba(255,255,166,1)
+                background-color: rgba(255,255,166,0)
+                p
+                    color: $c-yellow
+        .block
+            background-color: rgba(255,255,255,0.87)
+            height: 42px
+            margin-top: auto
+             
+@import "media"

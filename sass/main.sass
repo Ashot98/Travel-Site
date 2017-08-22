@@ -1,0 +1,76 @@
+@import "bourbon"
+@import "vars.sass"
+@import "smart-grid.sass"
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//Custom Styles Here
+.malang
+    padding-top: 50px
+    padding-bottom: 105px
+    +row-flex()
+    +align-items(center)
+    #img
+        +col()
+        +col-5()
+    .descr
+        +col()
+        +col-6()
+        +col-md-8()
+        +offset-md(2)
+        +offset-left(1)
+        p
+            color: #777777
+        
+.dest
+    padding-top: 50px
+    padding-bottom: 85px
+    background-color: #f2fefe
+    +row-flex()
+    +align-items(center)
+    #title
+        +col()
+        +col-7()
+        +offset-left(1)
+        align-self: center
+    .descr
+        +col()
+        +col-7()
+        +offset-left(1)
+        padding-top: 45px
+        p
+            color: #777777
+    .info
+        +col()
+        +col-2()
+        +offset(1)
+        align-self: center
+        p
+            font-family: "LatoMedium"
+            color: #aeaeae
+//ALWAYS END
+@import "media"

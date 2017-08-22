@@ -1,0 +1,84 @@
+@import "bourbon"
+@import "smart-grid.sass"
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media screen and (max-width : 1200px)
+	.button
+        font-size: 12px
+
+
+/* Medium Devices, Desktops */
+@media screen and (max-width : 960px)
+    .menubar
+        .logo
+            text-align: center
+    .malang
+        background-image: url("../img/sec_1_img_op.png")
+        background-repeat: no-repeat
+        background-position: center
+        img
+            display: none
+        .descr
+            text-align: center
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	h1
+        font-size: 60px
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+
+/* Extra Small Devices, Phones */
+@media screen and (max-width : 560px)
+    header
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .menubar
+            padding-top: 20px
+            height: 200px
+            .menu
+                order: 3
+                flex-direction: column
+                li
+                    width: 100%
+                    text-align: center
+            .user
+                text-align: right
+                order: 2
+                i
+                    margin-left: 10px
+                    margin-right: 5%
+        .title
+            margin-top: 200px
+            p
+                color: $c-light-blue
+            .button
+                p
+                    color: #000
+            .block
+                display: none
+    h1
+        font-size: 40px
+    h2
+        font-size: 40px
